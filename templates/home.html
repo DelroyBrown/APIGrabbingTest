@@ -4,30 +4,8 @@
 <h1>HOME</h1>
 
 
-<form action="{% url 'search' %}" method="get">
-    <input type="text" name="q">
-    <input type="submit" value="Search">
-</form>
+{% include 'data.html' %}
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for item in data %}
-        <tr>
-            <td><a href="{% url 'detail' item.id %}">{{ item.id }}</a></td>
-            <td>{{ item.name }}</td>
-            <td>{{ item.price }}</td>
-            <td>{{ item.quantity }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+
 
 {% endblock content %}
