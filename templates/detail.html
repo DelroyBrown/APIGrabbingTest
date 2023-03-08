@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>DETAIL VIEW</h1>
+<table>
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <td>{{ id }}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ name }}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{ price }}</td>
+        </tr>
+        <tr>
+            <th>Quantity</th>
+            <td>{{ quantity }}</td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock content %}
+
