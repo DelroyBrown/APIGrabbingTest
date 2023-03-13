@@ -1,28 +1,39 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
+<!-- This line is extending the base HTML template and using it as a starting point for this template. -->
+
 <h1>DETAIL VIEW</h1>
+<!-- This is a header with the text "DETAIL VIEW". -->
+
 <table>
     <tbody>
         <tr>
             <th>ID</th>
+            <!-- This is a table header cell with the text "ID". -->
             <td>{{ id }}</td>
+            <!-- This is a table data cell that displays the value of the "id" variable. -->
         </tr>
         <tr>
             <th>Name</th>
+            <!-- This is a table header cell with the text "Name". -->
             <td>{{ name }}</td>
+            <!-- This is a table data cell that displays the value of the "name" variable. -->
         </tr>
         <tr>
             <th>Price</th>
+            <!-- This is a table header cell with the text "Price". -->
             <td>{{ price }}</td>
+            <!-- This is a table data cell that displays the value of the "price" variable. -->
         </tr>
         <tr>
             <th>Quantity</th>
+            <!-- This is a table header cell with the text "Quantity". -->
             <td>{{ quantity }}</td>
+            <!-- This is a table data cell that displays the value of the "quantity" variable. -->
         </tr>
     </tbody>
 </table>
 
 {% endblock content %}
-
+<!-- This line closes the content block. -->

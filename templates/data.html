@@ -1,21 +1,34 @@
+<!-- form to search for items -->
 <form action="{% url 'search' %}" method="get">
+    <!-- input field for search query -->
     <input type="text" name="q">
+    <!-- submit button for search -->
     <input type="submit" value="Search">
 </form>
 
+<!-- table to display item data -->
 <table>
+    <!-- table header -->
     <thead>
         <tr>
+            <!-- header for item id column -->
             <th>ID</th>
+            <!-- header for item name column -->
             <th>Name</th>
         </tr>
     </thead>
+    <!-- table body -->
     <tbody>
+        <!-- loop through each item in data -->
         {% for item in data %}
+        <!-- table row for each item -->
         <tr>
+            <!-- column for item id with link to detail view -->
             <td><a href="{% url 'detail' item.id %}">{{ item.id }}</a></td>
+            <!-- column for item name -->
             <td>{{ item.name }}</td>
         </tr>
+        <!-- end of loop -->
         {% endfor %}
     </tbody>
 </table>
